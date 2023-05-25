@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>$(z</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TeamGrapeBankApp.MsTest\**" />
+    <EmbeddedResource Remove="TeamGrapeBankApp.MsTest\**" />
+    <None Remove="TeamGrapeBankApp.MsTest\**" />
+  </ItemGroup>
+
+</Project>
