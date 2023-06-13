@@ -91,7 +91,7 @@ namespace TeamGrapeBankApp
         }
 
         //Method to calculate and return yearly return on saved capital
-        internal static decimal ReturnYearlyInterest(int months, decimal amount)
+        public static decimal ReturnYearlyInterest(int months, decimal amount)
         {
             return amount * Admin.savingsDict[months] - amount;
         }

@@ -26,7 +26,7 @@ namespace TeamGrapeBankApp
         };
 
         //Dictionary to hold saving account rates, Key = months balance is locked from withdrawals
-        internal static Dictionary<int, decimal> savingsDict = new Dictionary<int, decimal>()
+        public static Dictionary<int, decimal> savingsDict = new Dictionary<int, decimal>()
         {
             {12, 1.0150m },
             {6, 1.0050m }

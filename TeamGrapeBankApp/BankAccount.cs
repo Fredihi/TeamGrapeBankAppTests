@@ -161,34 +161,16 @@ namespace TeamGrapeBankApp
           
            Console.WriteLine("What account do you want to move money from? ");
 
-            //FromAccount = userBankaccount.Count;
-            //BankAccount AccountFrom = userBankaccount[FromAccount -1];
             BankAccount AccountFrom = FromAccount;
 
 
             Console.WriteLine("What account do you want to move money to? ");
 
-            //ToAccount = userBankaccount.Count;
-            //BankAccount AccountTo = userBankaccount[ToAccount -1];
             BankAccount AccountTo = ToAccount;
 
             decimal Amount = Amounts;
 
-            //bool parseSuccess;
-            //decimal AmmountMove;
-            //do {
-
-            //    Console.WriteLine("How much money do you want to move? ");
-            //    parseSuccess = decimal.TryParse(Console.ReadLine(), out Amount);
-            //} while (!parseSuccess || Amount < 0);
-
-            ////Find logged in user object by username for use in ProcessTransaction
-            //User ownerObject = User.userList.Find(x => x.Username == username);
-
-            //internal static string ProcessTransaction(BankAccount fromAccount, BankAccount toAccount, User fromOwner, User toOwner, decimal amount)
-
-
-            //Logic to handle same and different currency transfers
+            
             if (AccountFrom.Currency == AccountTo.Currency)
             {
                 AccountFrom.Balance -= Amount;
@@ -201,24 +183,16 @@ namespace TeamGrapeBankApp
                 {
                     AccountFrom.Balance -= Amount;
                     AccountTo.Balance += Amount / Admin.currencyDict[AccountTo.Currency];
-                    //returnMessage = $"{Amount} {AccountFrom.Currency} transferred from account {fromAccount.AccountNumber} to account {toAccount.AccountNumber} " +
-                    //    $"at the exchange rate 1 / {Admin.currencyDict[toAccount.Currency]}. Press a key to return to main menu.";
+                    
                 }
                 else
                 {
                     AccountFrom.Balance -= Amount;
                     AccountTo.Balance += Amount * Admin.currencyDict[AccountFrom.Currency];
-                    //returnMessage = $"{amount} {fromAccount.Currency} transferred from account {fromAccount.AccountNumber} to account {toAccount.AccountNumber} " +
-                    //    $"at the exchange rate 1 * {Admin.currencyDict[fromAccount.Currency]}. Press a key to return to main menu.";
+                    
                 }
             }
 
-
-
-
-
-
-            //Console.WriteLine(Transaction.ProcessTransaction(AccountFrom, AccountTo, ownerObject, ownerObject, Amount));
             //Console.ReadKey();
         }
 
